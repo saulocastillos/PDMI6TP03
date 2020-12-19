@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <FlexLayout Direction="Column" BackgroundColor="Black">
+        <FlexLayout Direction="Row" HeightRequest="80" AlignItems="Center">
+            <Label 
+                Text="Sample Weather App" 
+                TextColor="White" 
+                FontSize="26" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+             />
+        </FlexLayout>
+        <FlexLayout BackgroundColor="Gray" Direction="Column" HeightRequest="140" Padding="10">
+            <Label 
+                Text="Search by Zip Code" 
+                TextColor="White" 
+                FontSize="16" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+             />
+            <Label 
+                Text="Small Text" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <FlexLayout Direction="Row" HeightRequest="50" WidthRequest="300">
+                <Entry 
+                x:Name="entryZip"
+                TextColor="White"   
+                FlexLayout.Grow="1"
+            />
+                <Button 
+                    Clicked="GetWeather_Clicked" 
+                    VerticalOptions="Fill" 
+                    HorizontalOptions="CenterAndExpand" 
+                    BackgroundColor="#414654" 
+                    Text="Get Weather" 
+                    TextColor="White" 
+                    FontSize="8"
+                    FontAttributes="Bold"
+                    WidthRequest="100"
+                    Margin="10"  
+                />
+            </FlexLayout>
+        </FlexLayout>
+        <FlexLayout Direction="Column" HeightRequest="500"  Padding="10">
+            <Label 
+                Text="Location" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelLocation"
+            />
+            <Label 
+                Text="Temperature" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelTemperature"
+            />
+            <Label 
+                Text="Wind Speed" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelWindSpeed"
+            />
+            <Label 
+                Text="Visibility" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelVisibility"
+            />
+            <Label 
+                Text="Humidity" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelHumidity"
+            />
+            <Label 
+                Text="Time of Sunrise" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelTimeOfSunrise"
+            />
+            <Label 
+                Text="Time of Sunset" 
+                TextColor="#c6c6c6" 
+                FontSize="12" 
+                FontAttributes="Bold" 
+                HorizontalTextAlignment="Left"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            />
+            <Label 
+                Text="-" 
+                TextColor="white" 
+                FontSize="16" 
+                HorizontalTextAlignment="Left"
+                Padding="4,0,8,10"
+                x:Name="labelTimeOfSunset"
+            />
+        </FlexLayout>
+    </FlexLayout>
+</ContentPage>
